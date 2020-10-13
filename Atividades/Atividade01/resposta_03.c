@@ -9,10 +9,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+//#include <math.h>
 
 int main (int argc, const char * argv[]) {
-    const double ONE_GIGA_BYTE = pow(1024, 3);
+//    const double ONE_GIGA_BYTE = pow(1024, 3);
+    const double ONE_GIGA_BYTE = 1024 * 1024 * 1024;
 
     unsigned int value = 0;
     double result;
