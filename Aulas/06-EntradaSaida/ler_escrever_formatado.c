@@ -12,7 +12,8 @@ int main(int argc, const char *argv[]) {
     scanf("%d", &number);
     scanf("%i", &number);
     scanf("%f", &value);
-    scanf("%s", name); // For the string we don't need the operator &
+//    scanf("%[^\n]s", name); // For the string we don't need the operator &
+//    fgets(name, 30, stdin);
 
     printf("%c\n", ch);
     printf("%d\n", number);
