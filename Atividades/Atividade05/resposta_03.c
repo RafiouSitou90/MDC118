@@ -14,7 +14,7 @@ const int SIZE = 80;
 
 int main(int argc, const char *argv[]) {
 
-    char characters[SIZE];
+    char characters[SIZE + 1];
 
     printf("Enter the characters (ex: max characters = %d) :", SIZE);
     gets(characters);
