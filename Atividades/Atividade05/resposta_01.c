@@ -31,7 +31,7 @@ int main(int argc, const char *argv[]) {
     }
 
     printf("\nThe Smallest number is %d\n", min);
-    printf("The Biggest  number is %d", max);
+    printf("The Biggest number  is %d", max);
 
     printf("\n\n");
     system("PAUSE");
