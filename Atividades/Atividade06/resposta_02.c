@@ -11,44 +11,46 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct PERSON PERSON;
-struct PERSON {
-    char name[30];
-    char phone[14];
+typedef struct CONTACT CONTACT;
+
+struct CONTACT {
+    char name[31];
+    char phone[11];
 };
 
-const int NB_PERSON = 2;
+const int NB_CONTACT = 10;
 
 int main(int argc, const char *argv[]) {
 
-    PERSON tab_person[NB_PERSON];
+    CONTACT tab_contact[NB_CONTACT];
 
-    for (int i = 0; i < NB_PERSON; i++) {
-        printf("\n********************** Person number %d **********************\n", i + 1);
+    memset(tab_contact, 0, sizeof(tab_contact));
+
+    for (int i = 0; i < NB_CONTACT; i++) {
+        printf("\n********************** Contact number %d **********************\n", i + 1);
         printf("Enter the name         :");
-        gets(tab_person[i].name);
+        gets(tab_contact[i].name);
 
-        while (30 < strlen(tab_person[i].name)) {
+        while (30 < strlen(tab_contact[i].name)) {
             printf("Max characters allowed for the name is 30, try again\n");
             printf("Enter the name         :");
-            gets(tab_person[i].name);
+            gets(tab_contact[i].name);
         }
 
-        printf("Enter the phone number :");
-        gets(tab_person[i].phone);
-        while (14 < strlen(tab_person[i].phone)) {
-            printf("Max characters allowed for the phone is 14, try again\n");
+        printf("Enter the phone number (Ex: 99999-9999) :");
+        gets(tab_contact[i].phone);
+        while (10 != strlen(tab_contact[i].phone)) {
+            printf("Max characters allowed for the phone is 10 (Ex: 99999-9999), try again\n");
             printf("Enter the phone number :");
-            gets(tab_person[i].phone);
+            gets(tab_contact[i].phone);
         }
     }
-    printf("\n");
 
-    printf("\n********************** Contact List    **********************\n");
-    for (int i = 0; i < NB_PERSON; i++) {
-        printf("\n********************** Person number %d **********************\n", i + 1);
-        printf("Name  : %s\n", tab_person[i].name);
-        printf("Phone : %s", tab_person[i].phone);
+    printf("\n\n========================= Contact List    =========================\n");
+    for (int i = 0; i < NB_CONTACT; i++) {
+        printf("\n********************** Contact number %d **********************\n", i + 1);
+        printf("Name  : %s\n", tab_contact[i].name);
+        printf("Phone : %s", tab_contact[i].phone);
     }
     printf("\n********************** End of the list **********************");
 
