@@ -21,9 +21,11 @@ int main(int argc, const char *argv[]) {
     printf("\n");
 
     if (number_1 < number_2) {
-        printf("The smaller number is %d", number_1);
+        printf("The smaller number is %d (%d < %d)", number_1, number_1, number_2);
     } else if (number_1 > number_2) {
-        printf("The smaller number is %d", number_2);
+        printf("The bigger number is %d (%d > %d)", number_1, number_1, number_2);
+    } else {
+        printf("The number 1 equals the number 2 (%d = %d)", number_1, number_2);
     }
 
     printf("\n\n");
